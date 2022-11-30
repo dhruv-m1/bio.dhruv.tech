@@ -1,19 +1,18 @@
 ---
-import Header from "../components/Header.astro";
+// Main Layout
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{Astro.props.title}</title>
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{Astro.props.title}</title>
+    </head>
+    <body class="overflow-x-hidden">
 
-        <main class="container mx-auto">
-            <Header></Header>
+        <main>
 
             <slot>
 
@@ -24,10 +23,13 @@ import Header from "../components/Header.astro";
                     <br/>
 
                     <small>Status Code: ASTRO_MAINLAYOUT_CONTENT_MISSING</small>
-                <section>
+                </section>
                     
             </slot>
+
         </main>
+
+        <script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     </body>
 </html>

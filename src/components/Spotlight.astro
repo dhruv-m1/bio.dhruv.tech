@@ -1,0 +1,55 @@
+---
+/*
+    Spotlight Compnent
+
+    Circular element with translucent gradient 
+    to be used for decoration in the backdrop of a page.
+
+*/
+
+const {variant = 'blue', height = '200px', width = '200px', 
+left = '0px', top = '0px', rotation = '0'} = Astro.props;
+
+---
+
+<div class:list={["rounded-full", `variant-${variant}`]}>
+
+</div>
+
+<!-- Certain dynamically selected styles & complex radial gradients are placed in the style tag,
+due to limitations with tailwind and the need to produce a highly resuable component -->
+
+<style define:vars={{ height, width, top, left, rotation}}>
+
+    /* Variants */ 
+
+    .variant-blue {
+
+        background: radial-gradient(50% 50% at 50% 50%, rgba(56, 189, 248, 0.17) 0%, rgba(56, 189, 248, 0) 100%);
+
+    }
+
+    .variant-purple {
+
+        background: radial-gradient(50% 50% at 50% 50%, rgba(117, 56, 248, 0.31) 0%, rgba(117, 56, 248, 0) 100%);
+
+    }
+
+    .variant-turquoise {
+
+        background: radial-gradient(50% 50% at 50% 50%, rgba(15, 161, 193, 0.25) 0%, rgba(15, 161, 193, 0) 100%);
+
+    }
+
+    /* Spotlight Postion & Size */
+
+    div {
+
+        height: var(--height);
+        width: var(--width);
+        margin-top: var(--top);
+        margin-left: var(--left);
+        transform: rotate(var(--rotation));
+    }
+
+</style>
