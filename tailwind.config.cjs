@@ -12,7 +12,7 @@ module.exports = {
 				'turquoise-25': 'hsla(191, 86%, 41%, 0.25)',
 				'turquoise-6': 'hsla(191, 86%, 41%, 0.06)',
 				'turquoise-0': 'hsla(191, 86%, 41%, 0)',
-				'w':'hsla(0, 0%, 100%, 0.2)'
+				'medium-purple': 'hsla(259, 94%, 35%,1)'
 			},
 
 			fontFamily: {

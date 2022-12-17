@@ -1,0 +1,8 @@
+---
+const {colorClass} = Astro.props;
+---
+
+<div class="w-full flex flex-row items-center">
+    <div class:list={["pl-6 h-8 w-8 rounded", `${colorClass}`]}></div>
+    <h2 class="pl-2 text-3xl font-bold"><slot></slot></h2>
+</div>
