@@ -7,6 +7,8 @@ import SolidContainer from "../components/SolidContainer.astro";
 import Spotlight from "../components/Spotlight.astro";
 
 import "../styles/base.css";
+import SectionHeadingLeft from "../components/SectionHeadingLeft.astro";
+import StandardSectionWrapper from "../components/StandardSectionWrapper.astro";
 ---
 
 <MainLayout title="Portfolio - Dhruv Malik | Software Engineer | Ethical Hacker">
@@ -42,11 +44,9 @@ import "../styles/base.css";
 
 	<SolidContainer>
 
-		<section class="flex flex-col py-5">
-			<div class="w-full flex flex-row items-center">
-				<div class="pl-6 h-8 w-8 bg-light-blue rounded"></div>
-				<h2 class="pl-2 text-3xl font-bold">About</h2>
-			</div>
+		<StandardSectionWrapper>
+
+			<SectionHeadingLeft colorClass="bg-light-blue">About</SectionHeadingLeft>
 
 			<div class="flex flex-row justify-center py-12">
 
@@ -69,11 +69,22 @@ import "../styles/base.css";
 				</div>
 
 			</div>
-		</section>
 
+		</StandardSectionWrapper>
 	</SolidContainer>
 
-	<GradientContainer></GradientContainer>
+	<GradientContainer>
+
+		<StandardSectionWrapper>
+
+			<SectionHeadingLeft colorClass="bg-medium-purple">Services & Skills</SectionHeadingLeft>
+
+			
+
+		</StandardSectionWrapper>
+
+	</GradientContainer>
+
 	<SolidContainer></SolidContainer>
 	<GradientContainer></GradientContainer>
 </MainLayout>
