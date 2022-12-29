@@ -9,9 +9,12 @@ import Spotlight from "../components/Spotlight.astro";
 import "../styles/base.css";
 import SectionHeadingLeft from "../components/SectionHeadingLeft.astro";
 import StandardSectionWrapper from "../components/StandardSectionWrapper.astro";
+import Skill from "../components/Skill.astro";
+import ReverseGradientContainer from "../components/ReverseGradientContainer.astro";
+import SkillGroup from "../components/SkillGroup.astro";
 ---
 
-<MainLayout title="Portfolio - Dhruv Malik | Software Engineer | Ethical Hacker">
+<MainLayout title="Dhruv Malik | Software Engineer | Ethical Hacker">
 
 	<GradientContainer>
 		<section class="flex flex-col h-screen">
@@ -73,19 +76,112 @@ import StandardSectionWrapper from "../components/StandardSectionWrapper.astro";
 		</StandardSectionWrapper>
 	</SolidContainer>
 
-	<GradientContainer>
+	<ReverseGradientContainer>
 
 		<StandardSectionWrapper>
 
-			<SectionHeadingLeft colorClass="bg-medium-purple">Services & Skills</SectionHeadingLeft>
+			<SectionHeadingLeft colorClass="bg-medium-purple">
+				Services & Skills	
+			</SectionHeadingLeft>
 
-			
+			<div class="relative">
+				<div class="absolute">
+					<Spotlight top="-200px" left="75vw" width="579px" height="339px" rotation="8deg" variant="purple"></Spotlight>
+				</div>
+			</div>
+
+			<div class="flex flex-row z-10 justify-center">
+
+				<div class="flex flex-col w-72 justify-center py-12 items-center text-center font-poppins font-semibold mx-[3%]">
+					<div class="h-40 w-40">
+						<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_aa0wy04q.json" background="transparent"  speed="1"  loop  autoplay></lottie-player>
+					</div>
+					<div>
+						<h3 class="text-xl py-3">Frontend & Hybrid Mobile App Development</h3>
+					</div>
+				</div>
+
+				<div class="flex flex-col w-72 justify-center items-center text-center font-poppins font-semibold mx-[3%]">
+					<div class="h-40 w-40">
+						<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_lzwjunns.json" background="transparent"  speed="1"  loop  autoplay></lottie-player>
+					</div>
+					<div>
+						<h3 class="text-xl py-3">Backend Development</h3>
+					</div>
+				</div>
+
+				<div class="flex flex-col w-72 justify-center items-center text-center font-poppins font-semibold mx-[3%]">
+					<div class="h-40 w-40">
+						<lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_kw5jwkm0.json" background="transparent"  speed="1"  loop  autoplay></lottie-player>
+					</div>
+					<div>
+						<h3 class="text-xl py-3">Penetration Testing<br/>for Web Apps</h3>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="relative">
+				<div class="absolute">
+					<Spotlight top="-60px" left="-9vw" width="1100px" height="339px" rotation="8deg" variant="purple"></Spotlight>
+				</div>
+			</div>
+
+			<div class="flex flex-col z-10 px-10 pb-10">
+
+				<div class="bg-dark-blue px-12 pt-6 font-poppins rounded-2xl border-[2px] border-slate-900">
+
+					<SkillGroup name="Languages & Frameworks I use">
+
+						<Skill>JavaScript</Skill>
+						<Skill>Node.js</Skill>
+						<Skill>TypeScript</Skill>
+						<Skill>Python</Skill>
+						<Skill>Java</Skill>
+						<Skill>HTML</Skill>
+						<Skill>CSS</Skill>
+						<Skill>Express</Skill>
+						<Skill>Fastify</Skill>
+						<Skill>Svelte</Skill>
+						<Skill>React</Skill>
+						<Skill>Vue.js</Skill>
+						<Skill>Astro</Skill>
+						<Skill>Auth0</Skill>
+						<Skill>NativeScript</Skill>
+						<Skill>Tailwind</Skill>
+						<Skill>Lottie</Skill>
+						<Skill>JQuery</Skill>
+
+					</SkillGroup>
+	
+					<SkillGroup name="I manage my data with">
+
+						<Skill>MongoDB</Skill>
+						<Skill>JSON</Skill>
+						<Skill>Redux</Skill>
+						<Skill>Pinia</Skill>
+						<Skill>Svelte Store</Skill>
+
+					</SkillGroup>
+
+				</div>
+
+			</div>
 
 		</StandardSectionWrapper>
 
-	</GradientContainer>
+	</ReverseGradientContainer>
 
-	<SolidContainer></SolidContainer>
-	<GradientContainer></GradientContainer>
+	<SolidContainer>
+
+		<SectionHeadingLeft colorClass="bg-medium-purple">
+			Side Projects	
+		</SectionHeadingLeft>
+
+	</SolidContainer>
+
+
+	<ReverseGradientContainer></ReverseGradientContainer>
+
 </MainLayout>
 

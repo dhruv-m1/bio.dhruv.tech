@@ -1,0 +1,14 @@
+---
+const {name = "Unnamed Skill Group"} = Astro.props;
+---
+
+<div class="mb-6">
+
+    <h3 class="font-bold text-xl">{name}</h3>
+    <div class="flex flex-row flex-wrap font-poppins font-bold w-[90%]">
+        
+        <slot>(i) Skills will display here once added.</slot>
+        
+     </div>
+
+</div>
