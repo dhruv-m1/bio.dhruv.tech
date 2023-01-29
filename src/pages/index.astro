@@ -72,9 +72,9 @@ import Project from "../components/Project.astro";
 
 					<div class="pt-6 text-base font-bold flex flex-row text-center align-center justify-center lg:justify-start">
 
-						<a href="/files/resume.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue">View Resume <i class="fa-solid fa-arrow-right"></i> </a>
-						<a href="https://linkedin.com/in/dhruvmalik" class="mr-5 py-2 text-2xl"> <i class="fa-brands fa-linkedin"></i> </a>
-						<a href="https://github.com/dhruv-tech/" class="mr-5 py-2 text-2xl"> <i class="fa-brands fa-github"></i> </a>
+						<a href="/files/resume_public.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue hover:opacity-80">View Resume <i class="fa-solid fa-arrow-right"></i> </a>
+						<a href="https://linkedin.com/in/dhruvmalik" class="mr-5 py-1 text-3xl hover:opacity-80"> <i class="fa-brands fa-linkedin"></i> </a>
+						<a href="https://github.com/dhruv-tech/" class="mr-5 py-1 text-3xl hover:opacity-80"> <i class="fa-brands fa-github"></i> </a>
 
 					</div>
 		
@@ -182,13 +182,13 @@ import Project from "../components/Project.astro";
 
 		<StandardSectionWrapper>
 
-			<SectionHeadingCenter>
+			<SectionHeadingLeft colorClass="bg-medium-turquoise">
 				Side Projects
-			</SectionHeadingCenter>
+			</SectionHeadingLeft>
 
 			<div class="m-6 flex flex-row justify-center text-center lg:text-left">
 
-				<Project title="Aquaduct" thumbnail="/assets/animations/aquaduct.json" github="#">
+				<Project title="Aqueduct" thumbnail="/assets/animations/aqueduct.json" github="https://github.com/dhruv-tech/Aqueduct">
 					A SMS-based chatbot designed to empower feature phone users with access to the internet. 
 					Built with NodeJS & Twilio SDK.
 				</Project>
@@ -197,7 +197,7 @@ import Project from "../components/Project.astro";
 
 			<div class="m-6 flex flex-row-reverse justify-center text-center lg:text-right">
 				
-				<Project title="NinjaChefs" thumbnail="/assets/animations/ninjachefs.json" github="#">
+				<Project title="NinjaChefs" thumbnail="/assets/animations/ninjachefs.json" github="https://github.com/dhruv-tech/ninjachefs-v3">
 					A website designed for home cooks to share their household recipes with the world. 
 					Built with React, Redux, NodeJS & MongoDB.
 				</Project>
@@ -206,7 +206,7 @@ import Project from "../components/Project.astro";
 
 			<div class="m-6 flex flex-row justify-center text-center lg:text-left">
 				
-				<Project title="Alpha Calorie Tracker" thumbnail="/assets/animations/calorie_tracker.json" github="#">
+				<Project title="Alpha Calorie Tracker" thumbnail="/assets/animations/calorie_tracker.json" github="https://github.com/dhruv-tech/calorie-tracker">
 					A web app developed for UBC students to easily discover food options on campus and track their daily caloric intake. 
 						Built with React, Redux, NodeJS & MongoDB.
 				</Project>
@@ -228,7 +228,7 @@ import Project from "../components/Project.astro";
 			</div>
 
 			<div class="flex flex-col w-[68%] justify-center align-middle text-center min-[1650px]:w-[75%]">
-				<h2 class="text-xl md:text-2xl">email@dhruv.tech</h2>
+				<h2 class="text-xl md:text-2xl"><a href="mailto:email@dhruv.tech">email@dhruv.tech</a></h2>
 				<div class="mt-8">
 					<a href="https://bit.ly/3Djul68" class="rounded-3xl py-3 px-5 mt-3 bg-white text-slate-900 w-60 hover:opacity-90">
 						Connect on LinkedIn
