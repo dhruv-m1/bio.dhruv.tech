@@ -12,6 +12,9 @@ import StandardSectionWrapper from "../components/StandardSectionWrapper.astro";
 import Skill from "../components/Skill.astro";
 import ReverseGradientContainer from "../components/ReverseGradientContainer.astro";
 import SkillGroup from "../components/SkillGroup.astro";
+import SectionHeadingCenter from "../components/SectionHeadingCenter.astro";
+import Service from "../components/Service.astro";
+import Project from "../components/Project.astro";
 ---
 
 <MainLayout title="Dhruv Malik | Software Engineer | Ethical Hacker">
@@ -23,19 +26,25 @@ import SkillGroup from "../components/SkillGroup.astro";
 
 			<div class="grow flex flex-row">
 
-				<div class="w-1/2 flex flex-col justify-center font-poppins font-bold">
+				<div class="w-full lg:w-1/2 flex flex-col justify-center font-poppins font-bold text-center lg:text-left">
 
 					<div class="pl-6 mt-[-15%]">
 
-						<h2 class="text-4xl pb-3">Building & Securing</h2>
-						<h1 class="text-5xl pb-12">Web Applications</h1>
-						<h3 class="font-medium text-2xl">Fullstack Developer, Security Enthusiast</h3>
+						<h2 class="text-3xl md:text-4xl pb-3">Building & Securing</h2>
+						<h1 class="text-4xl md:text-5xl pb-12">Web Applications</h1>
+						<h3 class="font-medium text-xl md:text-2xl">Fullstack Developer, Security Enthusiast</h3>
 
+					</div>
+
+					<div class="absolute w-full lg:hidden">
+						<div class="flex flex-row justify-center">
+							<Spotlight top="-200px" left="-100px" width="43.5rem" height="27.1rem" rotation="37deg" variant="blue"></Spotlight>
+						</div>
 					</div>
 					
 				</div>
 
-				<div class="w-1/2 flex justify-center items-center">
+				<div class="w-1/2 hidden lg:flex justify-center items-center">
 					<lottie-player src="/assets/animations/developer.json"  class="absolute mt-[-10%] z-10" background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player>
 					<Spotlight top="-150px" width="43.5rem" height="27.1rem" rotation="37deg" variant="blue"></Spotlight>
 				</div>
@@ -51,21 +60,21 @@ import SkillGroup from "../components/SkillGroup.astro";
 
 			<SectionHeadingLeft colorClass="bg-light-blue">About</SectionHeadingLeft>
 
-			<div class="flex flex-row justify-center py-12">
+			<div class="flex flex-col lg:flex-row justify-center align-middle py-12">
 
-				<div>
+				<div class="flex flex-row justify-center">
 					<img class="h-40" src="/assets/images/profile_pic.png">
 				</div>
 
-				<div class="flex flex-col justify-center font-poppins font-semibold text-xl w-[45%] pl-10">
+				<div class="flex flex-col justify-center font-poppins font-semibold text-lg md:text-xl text-center lg:text-left lg:w-[45%] pt-5 lg:pt-0 lg:pl-10">
 					<p>Software developer focused on web application development and security, 
 					with an interest in the internet of things.</p>
 
-					<div class="pt-9 text-base font-bold">
+					<div class="pt-6 text-base font-bold flex flex-row text-center align-center justify-center lg:justify-start">
 
-						<a href="/files/resume.pdf" class="rounded-3xl py-3 px-5 mr-3 bg-light-blue">View Resume ⩥</a>
-						<a href="/files/resume.pdf" class="mr-3">IN</a>
-						<a href="/files/resume.pdf" class="mr-3">GH</a>
+						<a href="/files/resume.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue">View Resume <i class="fa-solid fa-arrow-right"></i> </a>
+						<a href="https://linkedin.com/in/dhruvmalik" class="mr-5 py-2 text-2xl"> <i class="fa-brands fa-linkedin"></i> </a>
+						<a href="https://github.com/dhruv-tech/" class="mr-5 py-2 text-2xl"> <i class="fa-brands fa-github"></i> </a>
 
 					</div>
 		
@@ -84,50 +93,47 @@ import SkillGroup from "../components/SkillGroup.astro";
 				Services & Skills	
 			</SectionHeadingLeft>
 
-			<div class="relative">
+			<div class="relative lg:hidden">
+				<div class="absolute">
+					<Spotlight top="-150px" left="60vw" width="579px" height="339px" rotation="8deg" variant="purple"></Spotlight>
+				</div>
+			</div>
+
+			<div class="relative hidden lg:block">
 				<div class="absolute">
 					<Spotlight top="-200px" left="75vw" width="579px" height="339px" rotation="8deg" variant="purple"></Spotlight>
 				</div>
 			</div>
 
-			<div class="flex flex-row z-10 justify-center">
+			<div class="flex flex-col lg:flex-row z-10 align-center lg:justify-center">
 
-				<div class="flex flex-col w-72 justify-center py-12 items-center text-center font-poppins font-semibold mx-[3%]">
-					<div class="h-40 w-40">
-						<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_aa0wy04q.json" background="transparent"  speed="1"  loop  autoplay></lottie-player>
-					</div>
-					<div>
-						<h3 class="text-xl py-3">Frontend & Hybrid Mobile App Development</h3>
-					</div>
-				</div>
+				<Service thumbnail="/assets/animations/mobile_development.json">
+					Frontend & Hybrid Mobile Development
+				</Service>
+				
+				<Service thumbnail="/assets/animations/backend.json">
+					Backend Development
+				</Service>
 
-				<div class="flex flex-col w-72 justify-center items-center text-center font-poppins font-semibold mx-[3%]">
-					<div class="h-40 w-40">
-						<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_lzwjunns.json" background="transparent"  speed="1"  loop  autoplay></lottie-player>
-					</div>
-					<div>
-						<h3 class="text-xl py-3">Backend Development</h3>
-					</div>
-				</div>
-
-				<div class="flex flex-col w-72 justify-center items-center text-center font-poppins font-semibold mx-[3%]">
-					<div class="h-40 w-40">
-						<lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_kw5jwkm0.json" background="transparent"  speed="1"  loop  autoplay></lottie-player>
-					</div>
-					<div>
-						<h3 class="text-xl py-3">Penetration Testing<br/>for Web Apps</h3>
-					</div>
-				</div>
+				<Service thumbnail="/assets/animations/penetration_testing.json">
+					Penetration Testing<br/>for Web Apps
+				</Service>
 
 			</div>
 
-			<div class="relative">
+			<div class="relative lg:hidden">
+				<div class="absolute">
+					<Spotlight top="-70px" left="-25vw" width="750px" height="339px" rotation="8deg" variant="purple"></Spotlight>
+				</div>
+			</div>
+
+			<div class="relative hidden lg:block">
 				<div class="absolute">
 					<Spotlight top="-60px" left="-9vw" width="1100px" height="339px" rotation="8deg" variant="purple"></Spotlight>
 				</div>
 			</div>
 
-			<div class="flex flex-col z-10 px-10 pb-10">
+			<div class="flex flex-col z-10 px-2 lg:px-10 pb-10">
 
 				<div class="bg-dark-blue px-12 pt-6 font-poppins rounded-2xl border-[2px] border-slate-900">
 
@@ -174,14 +180,74 @@ import SkillGroup from "../components/SkillGroup.astro";
 
 	<SolidContainer>
 
-		<SectionHeadingLeft colorClass="bg-medium-purple">
-			Side Projects	
-		</SectionHeadingLeft>
+		<StandardSectionWrapper>
+
+			<SectionHeadingCenter>
+				Side Projects
+			</SectionHeadingCenter>
+
+			<div class="m-6 flex flex-row justify-center text-center lg:text-left">
+
+				<Project title="Aquaduct" thumbnail="/assets/animations/aquaduct.json" github="#">
+					A SMS-based chatbot designed to empower feature phone users with access to the internet. 
+					Built with NodeJS & Twilio SDK.
+				</Project>
+
+			</div>
+
+			<div class="m-6 flex flex-row-reverse justify-center text-center lg:text-right">
+				
+				<Project title="NinjaChefs" thumbnail="/assets/animations/ninjachefs.json" github="#">
+					A website designed for home cooks to share their household recipes with the world. 
+					Built with React, Redux, NodeJS & MongoDB.
+				</Project>
+
+			</div>
+
+			<div class="m-6 flex flex-row justify-center text-center lg:text-left">
+				
+				<Project title="Alpha Calorie Tracker" thumbnail="/assets/animations/calorie_tracker.json" github="#">
+					A web app developed for UBC students to easily discover food options on campus and track their daily caloric intake. 
+						Built with React, Redux, NodeJS & MongoDB.
+				</Project>
+
+			</div>
+			
+
+		</StandardSectionWrapper>
 
 	</SolidContainer>
 
 
-	<ReverseGradientContainer></ReverseGradientContainer>
+	<ReverseGradientContainer>
+
+		<div class="flex flex-row font-poppins font-bold">
+
+			<div class="bg-light-blue h-[400px] flex flex-col align-middle text-center justify-center w-[35%] md:w-[32%] ml-[-32px] rounded-br-[160px] lg:rounded-br-[175px] min-[1650px]:mt-10 min-[1650px]:ml-0 min-[1650px]:rounded-[25px] min-[1650px]:w-[25%]">
+				<h2 class="text-3xl md:text-4xl">Get in touch</h2>
+			</div>
+
+			<div class="flex flex-col w-[68%] justify-center align-middle text-center min-[1650px]:w-[75%]">
+				<h2 class="text-xl md:text-2xl">email@dhruv.tech</h2>
+				<div class="mt-8">
+					<a href="https://bit.ly/3Djul68" class="rounded-3xl py-3 px-5 mt-3 bg-white text-slate-900 w-60 hover:opacity-90">
+						Connect on LinkedIn
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="flex flex-col justify-center align-middle text-center w-full text-xs font-poppins py-10">
+			<span class="font-bold">© Dhruv Malik 2023-24. All Rights Reserved.</span>
+			<span>Built with Astro, Tailwind & Lottie. 
+			(<a href="https://github.com/dhruv-tech/dhruv.tech" target="_blank" rel="noopener noreferrer" class="underline">View on Github</a>)</span> 
+			<span>Version 3.0.0, Last updated 21/01/2023.</span>
+			<span>Thank you for visiting!</span>
+		</div>
+
+	</ReverseGradientContainer>
 
 </MainLayout>
 

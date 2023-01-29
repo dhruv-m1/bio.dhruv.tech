@@ -1,0 +1,26 @@
+---
+import Spotlight from "./Spotlight.astro";
+const {title, thumbnail, github, demo} = Astro.props;
+---
+
+<div class="font-poppins font-bold w-full lg:w-[50%] flex flex-col justify-center">
+
+    <h2 class="text-xl md:text-2xl">{title}</h2>
+
+    <p class="text-lg lg:text-xl my-3"><slot></slot></p>
+    <div class="text-base font-bold mt-3 lg:mt-6">
+
+        {demo && <a href={demo} class="rounded-3xl py-3 px-5 mr-3 bg-white text-slate-900 hover:opacity-95">Live Demo <i class="fa-solid fa-arrow-right"></i></a>}
+        <a href={github} class="mr-3 text-2xl relative top-1 hover:opacity-95"><i class="fa-brands fa-github"></i></a>
+
+    </div>
+</div>
+
+<div class="hidden lg:flex flex-row justify-center align-middle w-[17%] m-3">
+    <div class="relative z-0">
+        <Spotlight width="300px" height="300px" rotation="0deg" variant="turquoise"></Spotlight>
+    </div>
+    <div class="h-72 w-72 absolute z-10">
+        <lottie-player src={thumbnail} background="transparent"  speed="1"  loop  autoplay></lottie-player>
+    </div>
+</div>
