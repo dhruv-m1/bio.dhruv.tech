@@ -28,7 +28,7 @@ import Project from "../components/Project.astro";
 
 				<div class="w-full lg:w-1/2 flex flex-col justify-center font-poppins font-bold text-center lg:text-left">
 
-					<div class="lg:pl-6 mt-[-50%] lg:mt-[-15%]">
+					<div class="lg:pl-6 mt-[-10vh] lg:mt-[-15%] z-10">
 
 						<h2 class="text-3xl md:text-4xl pb-3">Building & Securing</h2>
 						<h1 class="text-4xl md:text-5xl pb-12">Web Applications</h1>
@@ -36,9 +36,9 @@ import Project from "../components/Project.astro";
 
 					</div>
 					
-					<div class="absolute w-full lg:hidden">
+					<div class="absolute w-full lg:hidden z-0">
 						<div class="flex flex-row justify-center">
-							<Spotlight top="-200px" left="-100px" width="43.5rem" height="27.1rem" rotation="37deg" variant="blue"></Spotlight>
+							<Spotlight top="-15vh" left="-100px" width="43.5rem" height="27.1rem" rotation="37deg" variant="blue"></Spotlight>
 						</div>
 					</div>
 					
@@ -227,7 +227,7 @@ import Project from "../components/Project.astro";
 				<h2 class="text-3xl md:text-4xl">Get in touch</h2>
 			</div>
 
-			<div class="flex flex-col w-[68%] justify-center align-middle text-center min-[1650px]:w-[75%]">
+			<div class="flex flex-col flex-grow justify-center align-middle text-center">
 				<h2 class="text-xl md:text-2xl"><a href="mailto:email@dhruv.tech">email@dhruv.tech</a></h2>
 				<div class="mt-8">
 					<a href="https://bit.ly/3Djul68" class="rounded-3xl py-3 px-5 mt-3 bg-white text-slate-900 w-60 hover:opacity-90">
