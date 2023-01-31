@@ -12,7 +12,7 @@ import StandardSectionWrapper from "../components/StandardSectionWrapper.astro";
 import Skill from "../components/Skill.astro";
 import ReverseGradientContainer from "../components/ReverseGradientContainer.astro";
 import SkillGroup from "../components/SkillGroup.astro";
-import SectionHeadingCenter from "../components/SectionHeadingCenter.astro";
+import Lottie from "astro-integration-lottie/Lottie.astro";
 import Service from "../components/Service.astro";
 import Project from "../components/Project.astro";
 ---
@@ -45,7 +45,11 @@ import Project from "../components/Project.astro";
 				</div>
 
 				<div class="w-1/2 hidden lg:flex justify-center items-center">
-					<lottie-player src="/assets/animations/developer.json"  class="absolute mt-[-10%] z-10" background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player>
+
+					<div class="absolute mt-[-10%] z-10 w-[500px] h-[500px]">
+						<Lottie src="/assets/animations/developer.json" autoplay={"visible"}></Lottie>
+					</div>
+
 					<Spotlight top="-150px" width="43.5rem" height="27.1rem" rotation="37deg" variant="blue"></Spotlight>
 				</div>
 

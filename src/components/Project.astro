@@ -1,4 +1,5 @@
 ---
+import Lottie from "astro-integration-lottie/Lottie.astro";
 import Spotlight from "./Spotlight.astro";
 const {title, thumbnail, github, demo} = Astro.props;
 ---
@@ -7,7 +8,7 @@ const {title, thumbnail, github, demo} = Astro.props;
 
     <h2 class="text-xl md:text-2xl">{title}</h2>
 
-    <p class="text-lg lg:text-xl my-3"><slot></slot></p>
+    <p class="text-lg lg:text-xl my-3 font-semibold"><slot></slot></p>
     <div class="text-base font-bold mt-3 lg:mt-6">
 
         {demo && <a href={demo} class="rounded-3xl py-3 px-5 mr-3 bg-white text-slate-900 hover:opacity-95">Live Demo <i class="fa-solid fa-arrow-right"></i></a>}
@@ -21,6 +22,6 @@ const {title, thumbnail, github, demo} = Astro.props;
         <Spotlight width="300px" height="300px" rotation="0deg" variant="turquoise"></Spotlight>
     </div>
     <div class="h-72 w-72 absolute z-10">
-        <lottie-player src={thumbnail} background="transparent"  speed="1"  loop  autoplay></lottie-player>
+        <Lottie src={thumbnail} autoplay={"visible"} loop={true}></Lottie>
     </div>
 </div>

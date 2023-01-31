@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
+import lottie from "astro-integration-lottie";
+
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind({config: { applyBaseStyles: false }})]
+  integrations: [lottie(), tailwind({config: { applyBaseStyles: false }})]
 });
