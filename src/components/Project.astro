@@ -1,6 +1,7 @@
 ---
-import Lottie from "astro-integration-lottie/Lottie.astro";
+import Lottie from "./Lottie.astro";
 import Spotlight from "./Spotlight.astro";
+
 const {title, thumbnail, github, demo} = Astro.props;
 ---
 
@@ -22,6 +23,6 @@ const {title, thumbnail, github, demo} = Astro.props;
         <Spotlight width="300px" height="300px" rotation="0deg" variant="turquoise"></Spotlight>
     </div>
     <div class="h-72 w-72 absolute z-10">
-        <Lottie src={thumbnail} autoplay={"visible"} loop={true}></Lottie>
+        <Lottie src={thumbnail} loop={true}></Lottie>
     </div>
 </div>
