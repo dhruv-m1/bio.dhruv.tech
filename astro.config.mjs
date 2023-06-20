@@ -1,15 +1,22 @@
 import { defineConfig } from 'astro/config';
-import lottie from "astro-integration-lottie";
 import tailwind from "@astrojs/tailwind";
+import compressor from "astro-compressor";
+import svelte from "@astrojs/svelte";
+
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
-import compressor from "astro-compressor";
+import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [lottie(), tailwind({
+
+  site: 'https://dhruv.tech',
+
+  integrations: [tailwind({
     config: {
       applyBaseStyles: false
     }
-  }), compressor()]
+  }), compressor(), svelte(), partytown({debug: true}), robotsTxt()]
+
 });
