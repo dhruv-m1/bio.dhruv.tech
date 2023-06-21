@@ -5,7 +5,6 @@ import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import SolidContainer from "../components/SolidContainer.astro";
 import Spotlight from "../components/Spotlight.astro";
-import Lottie from "../components/Lottie.svelte";
 
 import "../styles/base.css";
 import SectionHeadingLeft from "../components/SectionHeadingLeft.astro";
@@ -26,11 +25,16 @@ import Project from "../components/Project.astro";
 
 			<div class="grow flex flex-row">
 
-				<div class="w-full mt-[-25%] md:mt-[-15%] lg:mt-0 lg:w-1/2 flex flex-col justify-center items-center font-poppins font-bold text-center lg:text-left">
+				<div class="w-full mt-[-35%] md:mt-[-15%] lg:mt-0 lg:w-1/2 flex flex-col justify-center items-center font-poppins font-bold text-center lg:text-left">
 
 					<div class="z-10 w-[370px] h-[370px] lg:hidden">
 						
-						<Lottie src="/assets/animations/developer" client:visible></Lottie>
+						<dotlottie-player
+							src="/assets/animations/developer.lottie"
+							autoplay="true"
+							loop="true"
+						>
+						</dotlottie-player>
 						
 					</div>
 
@@ -44,7 +48,7 @@ import Project from "../components/Project.astro";
 					
 					<div class="absolute w-full lg:hidden z-0">
 						<div class="flex flex-row justify-center">
-							<Spotlight top="-15vh" left="-100px" width="43.5rem" height="27.1rem" rotation="37deg" variant="blue"></Spotlight>
+							<Spotlight top="-10vh" left="-10px" width="33.5rem" height="25rem" rotation="37deg" variant="blue"></Spotlight>
 						</div>
 					</div>
 					
@@ -54,7 +58,12 @@ import Project from "../components/Project.astro";
 
 					<div class="absolute mt-[-10%] z-10 w-[500px] h-[500px]">
 						
-						<Lottie src="/assets/animations/developer" client:visible></Lottie>
+						<dotlottie-player
+							src="/assets/animations/developer.lottie"
+							autoplay="true"
+							loop="true"
+						>
+						</dotlottie-player>
 						
 					</div>
 
@@ -84,7 +93,7 @@ import Project from "../components/Project.astro";
 
 					<div class="pt-6 text-base font-bold flex flex-row text-center align-center justify-center lg:justify-start">
 
-						<a href="/files/resume_public.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue hover:opacity-80" aria-label="View Resume">View Resume <i class="fa-solid fa-arrow-right"></i> </a>
+						<a href="/files/resume_public.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue hover:opacity-90" aria-label="View Resume">View Resume <i class="fa-solid fa-arrow-right"></i> </a>
 						<a href="https://linkedin.com/in/dhruvmalik" class="mr-5 py-1 text-3xl hover:opacity-80" aria-label="View Linkedin Profile"> <i class="fa-brands fa-linkedin"></i> </a>
 						<a href="https://github.com/dhruv-tech/" class="mr-5 py-1 text-3xl hover:opacity-80" aria-label="View Github Profile"> <i class="fa-brands fa-github"></i> </a>
 
