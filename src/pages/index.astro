@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import SolidContainer from "../components/SolidContainer.astro";
 import Spotlight from "../components/Spotlight.astro";
+import Lottie from "../components/Lottie.svelte";
 
 import "../styles/base.css";
 import SectionHeadingLeft from "../components/SectionHeadingLeft.astro";
@@ -47,13 +48,7 @@ import Project from "../components/Project.astro";
 
 					<div class="absolute mt-[-10%] z-10 w-[500px] h-[500px]">
 						
-						<dotlottie-player
-							autoplay="true"
-							loop="true"
-							mode="normal"
-							src="/assets/animations/developer.lottie"
-						>
-						</dotlottie-player>
+						<Lottie src="/assets/animations/developer" client:idle></Lottie>
 						
 					</div>
 
