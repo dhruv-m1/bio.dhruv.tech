@@ -12,6 +12,8 @@
 
     onMount(async () => {
 		console.log(identifier);
+        console.log(src);
+        
         const player = document.querySelector(`#${identifier}`);
         player.load(`${src}.lottie`);
 	});

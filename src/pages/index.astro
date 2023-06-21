@@ -26,13 +26,19 @@ import Project from "../components/Project.astro";
 
 			<div class="grow flex flex-row">
 
-				<div class="w-full lg:w-1/2 flex flex-col justify-center font-poppins font-bold text-center lg:text-left">
+				<div class="w-full mt-[-25%] md:mt-[-15%] lg:mt-0 lg:w-1/2 flex flex-col justify-center items-center font-poppins font-bold text-center lg:text-left">
 
-					<div class="lg:pl-6 mt-[-10vh] lg:mt-[-15%] z-10">
+					<div class="z-10 w-[370px] h-[370px] lg:hidden">
+						
+						<Lottie src="/assets/animations/developer" client:visible></Lottie>
+						
+					</div>
 
-						<h2 class="text-3xl md:text-4xl pb-3">Building & Securing</h2>
-						<h1 class="text-4xl md:text-5xl pb-12">Web Applications</h1>
-						<h3 class="font-medium text-xl md:text-2xl">Fullstack Developer, Security Enthusiast</h3>
+					<div class="lg:pl-6 lg:mt-[-15%] z-10">
+
+						<h1 class="text-2xl md:text-3xl lg:text-4xl pb-3">Building & Securing</h1>
+						<h1 class="text-3xl md:text-4xl lg:text-5xl pb-12">Web Applications</h1>
+						<h2 class="font-medium text-xl md:text-2xl">Fullstack Developer, Security Enthusiast</h2>
 
 					</div>
 					
@@ -48,7 +54,7 @@ import Project from "../components/Project.astro";
 
 					<div class="absolute mt-[-10%] z-10 w-[500px] h-[500px]">
 						
-						<Lottie src="/assets/animations/developer" client:load></Lottie>
+						<Lottie src="/assets/animations/developer" client:visible></Lottie>
 						
 					</div>
 
