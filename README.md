@@ -6,6 +6,8 @@ Working repository of the latest version (3.x.x) of my Personal Website.
 
 📝 Report issues [here](https://github.com/dhruv-tech/dhruv.tech/issues).
 
+⌚ Older versions: [v2.x.x](https://github.com/dhruv-tech/dhruv.tech_v2), [v1.x.x](https://github.com/dhruv-tech/dhruv.tech_v1)
+
 <img alt="screenshot of the website" src="https://github.com/dhruv-tech/dhruv.tech/assets/26849655/526a34d5-1013-47ba-bb6d-51e3ba617753" width="750">
 
 ---
