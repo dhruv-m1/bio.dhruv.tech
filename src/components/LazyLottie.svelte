@@ -1,3 +1,4 @@
+<!-- Lazy Loading Component for Lottie Animations -->
 
 <script type='text/partytown'>
 
@@ -11,9 +12,6 @@
     let identifier = `lottie-${uuidv4()}`;
 
     onMount(async () => {
-		console.log(identifier);
-        console.log(src);
-        
         const player = document.querySelector(`#${identifier}`);
         player.load(`${src}.lottie`);
 	});
