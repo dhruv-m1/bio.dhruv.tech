@@ -18,11 +18,13 @@ const {title, thumbnail, github, demo} = Astro.props;
     </div>
 </div>
 
+<div class="w-[2.5%] h-9"></div>
+
 <div class="hidden lg:flex flex-row justify-center align-middle w-[17%] m-3">
     <div class="relative z-0">
         <Spotlight width="300px" height="300px" rotation="0deg" variant="turquoise"></Spotlight>
     </div>
-    <div class="h-72 w-72 absolute z-10">
+    <div class="lg:h-[275px] lg:w-[275px] absolute z-10">
         <LazyLottie src={thumbnail} loop={true} client:visible></LazyLottie>
     </div>
 </div>

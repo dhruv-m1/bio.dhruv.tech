@@ -19,7 +19,7 @@ import Project from "../components/Project.astro";
 <MainLayout title="Dhruv Malik | Software Engineer | Ethical Hacker">
 
 	<GradientContainer>
-		<section class="flex flex-col h-screen">
+		<section class="flex flex-col h-screen min-h-[667px]">
 
 			<Header></Header>
 
@@ -218,7 +218,7 @@ import Project from "../components/Project.astro";
 
 			<div class="m-6 flex flex-row-reverse justify-center text-center lg:text-right">
 				
-				<Project title="NinjaChefs" thumbnail="/assets/animations/ninjachefs" github="https://github.com/dhruv-tech/ninjachefs-v3">
+				<Project title="NinjaChefs" thumbnail="/assets/animations/ninjachefs" github="https://github.com/dhruv-tech/ninjachefs" demo="https://ninjachefs.dhruv.tech">
 					A website designed for home cooks to share their household recipes with the world. 
 					Built with React, Redux, NodeJS & MongoDB.
 				</Project>
@@ -234,6 +234,14 @@ import Project from "../components/Project.astro";
 
 			</div>
 			
+			<div class="flex flex-col flex-grow justify-center align-middle text-center font-poppins font-bold">
+				<div class="mt-8 lg:mt-0 mb-10">
+					<a aria-label="Explore More" href="https://github.com/dhruv-tech" class="rounded-3xl py-3 px-5 mt-3 bg-white text-slate-900 w-60 hover:opacity-90">
+						Explore Projects on GitHub
+						<i class="fa-brands fa-github"></i> 
+					</a>
+				</div>
+			</div>
 
 		</StandardSectionWrapper>
 
@@ -262,9 +270,9 @@ import Project from "../components/Project.astro";
 
 		<div class="flex flex-col justify-center align-middle text-center w-full text-xs font-poppins py-10">
 			<span class="font-bold">© Dhruv Malik 2023-24. All Rights Reserved.</span>
-			<span>Built with Astro, Tailwind & Lottie. 
+			<span>Built with Astro, Svelte, Tailwind & Lottie 
 			(<a href="https://github.com/dhruv-tech/dhruv.tech" target="_blank" rel="noopener noreferrer" class="underline">View on Github</a>)</span> 
-			<span>Version 3.0.1, Last updated 21/01/2023.</span>
+			<span>Version 3.0.2, Last updated 07/07/2023</span>
 			<span>Thank you for visiting!</span>
 		</div>
 
