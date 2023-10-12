@@ -1,7 +1,7 @@
 ---
-
+const {title} = Astro.props;
 ---
 
-<section class="flex flex-col py-5">
+<section aria-label={title} class="flex flex-col py-5">
     <slot></slot>
 </section>

@@ -19,7 +19,7 @@ import Project from "../components/Project.astro";
 <MainLayout title="Dhruv Malik | Software Engineer | Ethical Hacker">
 
 	<GradientContainer>
-		<section class="flex flex-col h-screen min-h-[667px]">
+		<section aria-label="Personal Summary" class="flex flex-col h-screen min-h-[667px]">
 
 			<Header></Header>
 
@@ -27,7 +27,7 @@ import Project from "../components/Project.astro";
 
 				<div class="w-full mt-[-35%] md:mt-[-15%] lg:mt-0 lg:w-1/2 flex flex-col justify-center items-center font-poppins font-bold text-center lg:text-left">
 
-					<div class="z-10 w-[370px] h-[370px] lg:hidden">
+					<figure class="z-10 w-[370px] h-[370px] lg:hidden" aria-label="animated illustration of a software developer floating in the air">
 						
 						<dotlottie-player
 							src="/assets/animations/developer.lottie"
@@ -36,12 +36,14 @@ import Project from "../components/Project.astro";
 						>
 						</dotlottie-player>
 						
-					</div>
+					</figure>
 
 					<div class="lg:pl-6 lg:mt-[-15%] z-10">
 
-						<h1 class="text-2xl md:text-3xl lg:text-4xl pb-3">Building & Securing</h1>
-						<h1 class="text-3xl md:text-4xl lg:text-5xl pb-12">Web Applications</h1>
+						<hgroup>
+							<p class="text-2xl md:text-3xl lg:text-4xl pb-3">Building & Securing</p>
+							<h1 class="text-3xl md:text-4xl lg:text-5xl pb-12">Web Applications</h1>
+						</hgroup>
 						<h2 class="font-medium text-xl md:text-2xl">Fullstack Developer, Security Enthusiast</h2>
 
 					</div>
@@ -56,7 +58,7 @@ import Project from "../components/Project.astro";
 
 				<div class="w-1/2 hidden lg:flex justify-center items-center">
 
-					<div class="absolute mt-[-10%] z-10 w-[500px] h-[500px]">
+					<figure class="absolute mt-[-10%] z-10 w-[500px] h-[500px]" aria-label="animated illustration of a software developer floating in the air">
 						
 						<dotlottie-player
 							src="/assets/animations/developer.lottie"
@@ -65,7 +67,7 @@ import Project from "../components/Project.astro";
 						>
 						</dotlottie-player>
 						
-					</div>
+					</figure>
 
 					<Spotlight top="-150px" width="43.5rem" height="27.1rem" rotation="37deg" variant="blue"></Spotlight>
 				</div>
@@ -77,14 +79,14 @@ import Project from "../components/Project.astro";
 
 	<SolidContainer>
 
-		<StandardSectionWrapper>
+		<StandardSectionWrapper title="About Me">
 
 			<SectionHeadingLeft colorClass="bg-light-blue">About</SectionHeadingLeft>
 
 			<div class="flex flex-col lg:flex-row justify-center align-middle py-12">
 
 				<div class="flex flex-row justify-center">
-					<img class="h-40 w-40" src="/assets/images/profile_pic.webp" alt="Profile picture">
+					<img class="h-40 w-40" src="/assets/images/profile_pic.webp" alt="Headshot of Dhruv">
 				</div>
 
 				<div class="flex flex-col justify-center font-poppins font-semibold text-lg md:text-xl text-center lg:text-left lg:w-[45%] pt-5 lg:pt-0 lg:pl-10">
@@ -93,7 +95,7 @@ import Project from "../components/Project.astro";
 
 					<div class="pt-6 text-base font-bold flex flex-row text-center align-center justify-center lg:justify-start">
 
-						<a href="/files/resume_public.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue hover:opacity-90" aria-label="View Resume">View Resume <i class="fa-solid fa-arrow-right"></i> </a>
+						<a href="/files/resume_public.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue hover:opacity-90" aria-label="View Resume">View Resume <symbol aria-hidden="true" class="fa-solid fa-arrow-right"/> </a>
 						<a href="https://linkedin.com/in/dhruvmalik" class="mr-5 py-1 text-3xl hover:opacity-80" aria-label="View Linkedin Profile"> <i class="fa-brands fa-linkedin"></i> </a>
 						<a href="https://github.com/dhruv-tech/" class="mr-5 py-1 text-3xl hover:opacity-80" aria-label="View Github Profile"> <i class="fa-brands fa-github"></i> </a>
 
@@ -108,7 +110,7 @@ import Project from "../components/Project.astro";
 
 	<ReverseGradientContainer>
 
-		<StandardSectionWrapper>
+		<StandardSectionWrapper title="Services offered and technical skills">
 
 			<SectionHeadingLeft colorClass="bg-medium-purple">
 				Services & Skills	
@@ -126,18 +128,18 @@ import Project from "../components/Project.astro";
 				</div>
 			</div>
 
-			<div class="flex flex-col lg:flex-row z-10 align-center lg:justify-center">
+			<div class="flex flex-col lg:flex-row z-10 align-center lg:justify-center" role="list" aria-label="Services Offered">
 
-				<Service thumbnail="/assets/animations/mobile_development">
+				<Service thumbnail="/assets/animations/mobile_development" label="a floating smartphone displaying a to-do app interface">
 					Frontend & Hybrid Mobile Development
 				</Service>
 				
-				<Service thumbnail="/assets/animations/backend">
+				<Service thumbnail="/assets/animations/backend" label="servers communicating in a datacenter">
 					Backend Development
 				</Service>
 
-				<Service thumbnail="/assets/animations/penetration_testing">
-					Penetration Testing<br/>for Web Apps
+				<Service thumbnail="/assets/animations/penetration_testing" label="a rotating security camera">
+					Penetration Testing<br role="presentation"/>for Web Apps
 				</Service>
 
 			</div>
@@ -201,7 +203,7 @@ import Project from "../components/Project.astro";
 
 	<SolidContainer>
 
-		<StandardSectionWrapper>
+		<StandardSectionWrapper title="Featured Side Projects">
 
 			<SectionHeadingLeft colorClass="bg-medium-turquoise">
 				Side Projects
@@ -218,9 +220,9 @@ import Project from "../components/Project.astro";
 
 			<div class="m-6 flex flex-row-reverse justify-center text-center lg:text-right">
 				
-				<Project title="NinjaChefs" thumbnail="/assets/animations/ninjachefs" github="https://github.com/dhruv-tech/ninjachefs" demo="https://ninjachefs.dhruv.tech">
-					A website designed for home cooks to share their household recipes with the world. 
-					Built with React, Redux, NodeJS & MongoDB.
+				<Project title="NinjaChefs + AI" thumbnail="/assets/animations/ninjachefs" github="https://github.com/dhruv-tech/ninjachefs" demo="https://go.dhruv.tech/p/ninjachefs">
+					Web application that leverages Generative AI to simplify online recipe sharing. 
+					Built with React, NodeJS, Clerk, MongoDB & OpenAI Platform SDK.
 				</Project>
 
 			</div>
@@ -236,7 +238,7 @@ import Project from "../components/Project.astro";
 			
 			<div class="flex flex-col flex-grow justify-center align-middle text-center font-poppins font-bold">
 				<div class="mt-8 lg:mt-0 mb-10">
-					<a aria-label="Explore More" href="https://github.com/dhruv-tech" class="rounded-3xl py-3 px-5 mt-3 bg-white text-slate-900 w-60 hover:opacity-90">
+					<a aria-label="Explore Projects on GitHub" href="https://github.com/dhruv-tech" class="rounded-3xl py-3 px-5 mt-3 bg-white text-slate-900 w-60 hover:opacity-90">
 						Explore Projects on GitHub
 						<i class="fa-brands fa-github"></i> 
 					</a>
@@ -250,14 +252,14 @@ import Project from "../components/Project.astro";
 
 	<ReverseGradientContainer>
 
-		<div class="flex flex-row font-poppins font-bold">
+		<section aria-label="Contact information" class="flex flex-row font-poppins font-bold">
 
 			<div class="bg-light-blue h-[400px] flex flex-col align-middle text-center justify-center w-[35%] md:w-[32%] ml-[-32px] rounded-br-[160px] lg:rounded-br-[175px] min-[1650px]:mt-10 min-[1650px]:ml-0 min-[1650px]:rounded-[25px] min-[1650px]:w-[25%]">
 				<h2 class="text-3xl md:text-4xl">Get in touch</h2>
 			</div>
 
 			<div class="flex flex-col flex-grow justify-center align-middle text-center">
-				<h2 class="text-xl md:text-2xl"><a href="mailto:email@dhruv.tech" aria-label="Send an email">email@dhruv.tech</a></h2>
+				<p class="text-xl md:text-2xl"><a href="mailto:email@dhruv.tech" aria-label="Send an email to email@dhruv.tech">email@dhruv.tech</a></p>
 				<div class="mt-8">
 					<a aria-label="Connect on Linkedin" href="https://bit.ly/3Djul68" class="rounded-3xl py-3 px-5 mt-3 bg-white text-slate-900 w-60 hover:opacity-90">
 						Connect on LinkedIn
@@ -266,15 +268,15 @@ import Project from "../components/Project.astro";
 				</div>
 			</div>
 
-		</div>
+		</section>
 
-		<div class="flex flex-col justify-center align-middle text-center w-full text-xs font-poppins py-10">
+		<footer role="contentinfo" class="flex flex-col justify-center align-middle text-center w-full text-xs font-poppins py-10">
 			<span class="font-bold">© Dhruv Malik 2023-24. All Rights Reserved.</span>
 			<span>Built with Astro, Svelte, Tailwind & Lottie 
 			(<a href="https://github.com/dhruv-tech/dhruv.tech" target="_blank" rel="noopener noreferrer" class="underline">View on Github</a>)</span> 
 			<span>Version 3.0.2, Last updated 07/07/2023</span>
 			<span>Thank you for visiting!</span>
-		</div>
+		</footer>
 
 	</ReverseGradientContainer>
 </MainLayout>

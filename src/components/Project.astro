@@ -5,9 +5,9 @@ import Spotlight from "./Spotlight.astro";
 const {title, thumbnail, github, demo} = Astro.props;
 ---
 
-<div class="font-poppins font-bold w-full lg:w-[50%] flex flex-col justify-center">
+<article class="font-poppins font-bold w-full lg:w-[50%] flex flex-col justify-center">
 
-    <h2 class="text-xl md:text-2xl">{title}</h2>
+    <h3 class="text-xl md:text-2xl">{title}</h3>
 
     <p class="text-lg lg:text-xl my-3 font-semibold"><slot></slot></p>
     <div class="text-base font-bold mt-3 lg:mt-6">
@@ -16,15 +16,15 @@ const {title, thumbnail, github, demo} = Astro.props;
         <a href={github} class="text-3xl relative top-1 hover:opacity-80" aria-label="View Github repository"><i class="fa-brands fa-github"></i></a>
 
     </div>
-</div>
+</article>
 
 <div class="w-[2.5%] h-9"></div>
 
-<div class="hidden lg:flex flex-row justify-center align-middle w-[17%] m-3">
+<div class="hidden lg:flex flex-row justify-center align-middle w-[17%] m-3" role="presentation">
     <div class="relative z-0">
         <Spotlight width="300px" height="300px" rotation="0deg" variant="turquoise"></Spotlight>
     </div>
-    <div class="lg:h-[275px] lg:w-[275px] absolute z-10">
+    <figure class="lg:h-[275px] lg:w-[275px] absolute z-10" role="presentation" aria-hidden="true">
         <LazyLottie src={thumbnail} loop={true} client:visible></LazyLottie>
-    </div>
+    </figure>
 </div>
