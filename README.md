@@ -16,10 +16,10 @@ Working repository of the latest version (3.x.x) of my Personal Website.
 
 The website currently uses the following technologies:
 
-* Astro (as the MPA framework w/ hybrid rendering capabilities)
+* Astro (frontend framework)
 * Tailwind (for styling)
 * Lottie (for animations)
-* Partytown (for reducing load on the main thread, and reduce TBT)
+* Partytown (for reducing load on the main thread)
 * Svelte (currently for lazy loading of animations through dynamic islands; to be used to interactive features in the future)
 
 Future iterations are likely to also use:
@@ -29,9 +29,9 @@ Future iterations are likely to also use:
 
 ## Benchmarking
 
-The project's primary audience is believed to be users of desktop browsers, thus it designed as desktop-first and optimised for desktop browsers.
+The project's primary audience are (likely) users of desktop browsers, thus it designed as desktop-first and optimised for desktop browsers.
 
-It is benchmarked to score 90+ for desktop performance, accessibility, best practices, & SEO on [Google Core Vitals metrics](pagespeed.web.dev).
+It is benchmarked to score 90+ for desktop performance, accessibility, best practices, & SEO on [Google Core Vitals metrics](https://pagespeed.web.dev).
 
 While not optimised for mobile, the website is made to be responsive and functional on mobile devices (width >= 375px).
 
