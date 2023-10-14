@@ -12,8 +12,8 @@ const {title, thumbnail, github, demo} = Astro.props;
     <p class="text-lg lg:text-xl my-3 font-semibold"><slot></slot></p>
     <div class="text-base font-bold mt-3 lg:mt-6">
 
-        {demo && <a href={demo} class="rounded-3xl py-3 px-5 mr-3 bg-white text-slate-900 hover:opacity-95">Live Demo <i class="fa-solid fa-arrow-right"></i></a>}
-        <a href={github} class="text-3xl relative top-1 hover:opacity-80" aria-label="View Github repository"><i class="fa-brands fa-github"></i></a>
+        {demo && <a href={demo} class="rounded-3xl py-3 px-5 mr-3 bg-white text-slate-900 hover:opacity-95">Live Demo <span class="fa-solid fa-arrow-right"></span></a>}
+        <a href={github} class="text-3xl relative top-1 hover:opacity-80" aria-label="View Github repository"><span class="fa-brands fa-github"></span></a>
 
     </div>
 </article>
