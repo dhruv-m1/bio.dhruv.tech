@@ -31,7 +31,7 @@ Future iterations are likely to also use:
 
 The project's primary audience are (likely) users of desktop browsers, thus it designed as desktop-first and optimised for desktop browsers.
 
-It is benchmarked to score 90+ for desktop performance, accessibility, best practices, & SEO on [Google Core Vitals metrics](https://pagespeed.web.dev).
+It is benchmarked to score 90+ for desktop performance, accessibility, best practices, & SEO on [Google Core Vitals](https://pagespeed.web.dev/analysis/https-dhruv-tech/iik6fdrh1z?form_factor=desktop).
 
 While not optimised for mobile, the website is made to be responsive and functional on mobile devices (width >= 375px).
 
