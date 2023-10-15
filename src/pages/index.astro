@@ -31,8 +31,9 @@ import Project from "../components/Project.astro";
 						
 						<dotlottie-player
 							src="/assets/animations/developer.lottie"
-							autoplay="true"
-							loop="true"
+							autoplay=true
+							loop=true
+							worker=true
 						>
 						</dotlottie-player>
 						
@@ -41,7 +42,10 @@ import Project from "../components/Project.astro";
 					<div class="lg:pl-6 lg:mt-[-15%] z-10">
 
 						<hgroup>
-							<p class="text-2xl md:text-3xl lg:text-4xl pb-3">Building & Securing</p>
+							<div class="flex justify-center lg:justify-start">
+								<p class="pb-3 text-2xl md:text-3xl lg:text-4xl overflow-hidden whitespace-nowrap inline-block animate-type">Building & Securing</p>
+								<p aria-hidden="true" class="pb-3 text-2xl md:text-3xl lg:text-4xl inline-block animate-cursor">_</p>
+							</div>
 							<h1 class="text-3xl md:text-4xl lg:text-5xl pb-12">Web Applications</h1>
 						</hgroup>
 						<h2 class="font-medium text-xl md:text-2xl">Fullstack Developer, Security Enthusiast</h2>
@@ -64,6 +68,7 @@ import Project from "../components/Project.astro";
 							src="/assets/animations/developer.lottie"
 							autoplay="true"
 							loop="true"
+							worker="true"
 						>
 						</dotlottie-player>
 						
@@ -95,7 +100,7 @@ import Project from "../components/Project.astro";
 
 					<div class="pt-6 text-base font-bold flex flex-row text-center align-center justify-center lg:justify-start">
 
-						<a href="/files/resume_public.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue hover:opacity-90" aria-label="View Resume">View Resume <span aria-hidden="true" class="fa-solid fa-arrow-right"/> </a>
+						<a href="/files/resume_public.pdf" class="rounded-3xl px-5 pt-3 mr-5 bg-light-blue hover:opacity-90" aria-label="View Resumé">View Resume <span aria-hidden="true" class="fa-solid fa-arrow-right"/> </a>
 						<a href="https://linkedin.com/in/dhruvmalik" class="mr-5 py-1 text-3xl hover:opacity-80" aria-label="View Linkedin Profile"> <span class="fa-brands fa-linkedin"></span> </a>
 						<a href="https://github.com/dhruv-tech/" class="mr-5 py-1 text-3xl hover:opacity-80" aria-label="View Github Profile"> <span class="fa-brands fa-github"></span> </a>
 
@@ -274,7 +279,7 @@ import Project from "../components/Project.astro";
 			<span class="font-bold">© Dhruv Malik 2023-24. All Rights Reserved.</span>
 			<span>Built with Astro, Svelte, Tailwind & Lottie 
 			(<a href="https://github.com/dhruv-tech/dhruv.tech" target="_blank" rel="noopener noreferrer" class="underline">View on Github</a>)</span> 
-			<span>Version 3.0.2, Last updated 07/07/2023</span>
+			<span>Version 3.0.3, Last updated 03/10/2023</span>
 			<span>Thank you for visiting!</span>
 		</footer>
 
