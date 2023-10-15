@@ -5,7 +5,7 @@ const {thumbnail} = Astro.props;
 ---
 
 <div class="flex flex-col lg:w-72 justify-center py-6 lg:py-12 items-center text-center font-poppins font-semibold mx-[3%]" role="listitem">
-    <figure class="h-32 w-32 lg:h-40 lg:w-40" role="presentation">
+    <figure class="h-32 w-32 lg:h-40 lg:w-40" role="presentation" aria-hidden="true">
         <LazyLottie src={thumbnail} client:visible></LazyLottie>
     </figure>
     <div>

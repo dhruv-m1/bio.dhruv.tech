@@ -3,26 +3,30 @@
 <script type='text/partytown'>
 
     import { onMount } from 'svelte';
-    import { v4 as uuidv4 } from 'uuid';
 
-    export let autoplay = 'true';
-    export let loop = 'true';
+    export let autoplay = true;
+    export let loop = true;
     export let mode = 'normal';
+    export let controls = false;
     export let src;
-    let identifier = `lottie-${uuidv4()}`;
 
-    onMount(async () => {
-        const player = document.querySelector(`#${identifier}`);
+    let player;
+    onMount(async() => {
         player.load(`${src}.lottie`);
+        player.addEventListener('ready', () => {
+            if (autoplay) player.play();
+        });
 	});
     
     
 </script>
     
-<dotlottie-player
-    id={identifier}
-    autoplay={autoplay}
-    loop={loop}
-    mode={mode}
+<dotlottie-player bind:this={player}
+
+    autoplay = {autoplay}
+    loop = {loop}
+    mode = {mode}
+    controls = {controls}
+    worker = true
 >
 </dotlottie-player>
