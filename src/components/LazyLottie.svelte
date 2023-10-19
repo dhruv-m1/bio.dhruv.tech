@@ -13,11 +13,7 @@
     let player;
     onMount(async() => {
         player.load(`${src}.lottie`);
-        player.addEventListener('ready', () => {
-            if (autoplay) player.play();
-        });
 	});
-    
     
 </script>
     
